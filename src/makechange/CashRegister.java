@@ -25,7 +25,7 @@ public class CashRegister {
 			System.out.println("Thank you. ");
 		} else {
 			double change = (amount - price);
-			System.out.println(change);
+			System.out.println(change + " in change.");
 			if (change > 20) {
 				int numOf20s = (int) (change / 20);
 				if (numOf20s > 0) {
@@ -77,13 +77,13 @@ public class CashRegister {
 			if (change > 0.05) {
 				int numOfNickels = (int) (change / 0.05);
 				if (numOfNickels > 0) {
-					System.out.println(numOfNickels + " Nickels.");
+					System.out.println(numOfNickels + " nickels.");
 					change = (change % 0.05);
 				}
 
 			}
-			if (change > 0.01) {
-				int numOfPennies = (int) (change / 20);
+			if (change >= 0.01) {
+				int numOfPennies = (int) (change / 0.01);
 				if (numOfPennies > 0) {
 					System.out.println(numOfPennies + " pennies.");
 					change = (change % 0.01);
