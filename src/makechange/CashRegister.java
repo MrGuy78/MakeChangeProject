@@ -8,26 +8,26 @@ public class CashRegister {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Please enter the price of the item: ");
-			double x = sc.nextDouble();
+			double price = sc.nextDouble();
 			
 		System.out.println("Please enter the amount tendered: ");
-			double y = sc.nextDouble();
+			double amount = sc.nextDouble();
 			
-		System.out.println(result);
+		calcChange(price, amount);
 		
 		sc.close();
 	}
-	public static double calcChange(double x, double y) {
+	public static void calcChange(double price, double amount) {
 		double result = 0.0;
-		if(x > y) {
-			result = (x - y);
-			
-		else if(x < y) {
-			System.out.println("Does not compute. ");
-				
-			}
+		if(price > amount) {
+			System.out.println("Insufficient funds. ");
 		}
-		return result();
+		else if(price == amount) {
+			System.out.println("Thank you. ");
+		}
+		else {
+			double change = (amount - price);
+		}
 	}
 	
 }
