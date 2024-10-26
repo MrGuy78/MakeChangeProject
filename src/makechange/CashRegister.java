@@ -82,6 +82,7 @@ public class CashRegister {
 				}
 
 			}
+			change = (change + 0.0001);
 			if (change >= 0.01) {
 				int numOfPennies = (int) (change / 0.01);
 				if (numOfPennies > 0) {
